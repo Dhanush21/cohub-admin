@@ -8,7 +8,12 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "admin:install": "cd admin-app && npm install",
+    "admin:dev": "cd admin-app && npm run dev",
+    "admin:build": "cd admin-app && npm run build",
+    "setup:all": "./setup-both-apps.sh",
+    "dev:all": "./run-both-apps.sh"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.2",
