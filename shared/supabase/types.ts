@@ -212,7 +212,7 @@ export type CompositeTypes<
 }
   ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    ? DefaultSchema["CompositeTypes"][CompositeTypeNameOrOptions]
     : never
 
 export const Constants = {
@@ -224,3 +224,4 @@ export const Constants = {
     },
   },
 } as const
+

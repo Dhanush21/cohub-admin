@@ -60,6 +60,45 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Admin App
+
+This repo now contains a separate admin SPA under `admin-app/`. Both apps share the same Supabase backend via the shared module in `shared/supabase/`.
+
+### Run Client App
+
+```bash
+npm install
+npm run dev
+```
+
+Client runs at http://localhost:8080/.
+
+### Run Admin App
+
+```bash
+cd admin-app
+npm install
+npm run dev
+```
+
+Admin runs at http://localhost:8081/.
+
+### Shared Backend/Database Config
+
+- Supabase client and types live in `shared/supabase/`.
+- Import in both apps: `import { supabase } from '@shared/supabase/client'`.
+- Both apps connect to the same Supabase project URL/key ensuring consistent data.
+
+### Build
+
+```bash
+# client
+npm run build
+
+# admin
+cd admin-app && npm run build
+```
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/dde07fd9-6751-4873-99a4-77b6bc2821f9) and click on Share -> Publish.
